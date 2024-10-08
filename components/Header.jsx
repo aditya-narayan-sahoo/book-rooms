@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/images/logo.svg";
-import { FaUser, FaSignInAlt, FaSignOutAlt, FaBuilding } from "react-icons/fa";
+import { FaUser, FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
 const Header = () => {
   return (
     <header className="bg-gray-100">

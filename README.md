@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Book Rooms
+
+## Overview
+
+**Book Rooms** is a web application built with Next.js that allows users to book rooms efficiently. Users can log in or sign up using their email, add rooms, view available rooms, and perform CRUD operations on their bookings. The backend is powered by Appwrite, ensuring a robust and scalable solution.
+
+## Features
+
+- **User Authentication**: Sign up and log in using email.
+- **Room Management**: Add new rooms and view available options.
+- **Booking Management**: Create, read, update, and delete bookings.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Tailwind CSS**: Utilizes Tailwind for styling, ensuring a modern UI.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Before setting up the project, ensure you have the following installed:
+
+- **Node.js** (latest LTS version)
+- **npm** (comes with Node.js) or **yarn** (optional)
+- **tailwindCSS** (can be configured on the project initialization page)
+
+### Setup Instructions
+
+1. **Clone the Repository**
+
+   Open your terminal and run:
+
+   ```bash
+   git clone https://github.com/aditya-narayan-sahoo/book-rooms.git
+   cd book-rooms
+   ```
+
+2. **Install Dependencies**
+
+   Run the following command to install the necessary packages:
+
+   ```bash
+   npm install
+   ```
+
+   Or if you prefer using yarn:
+
+   ```bash
+   yarn install
+   ```
+
+3. **Configure Environment Variables**
+
+   Create a `.env.local` file in the root of your project and add the following configuration:
+
+   ```plaintext
+   NEXT_APPWRITE_KEY=your-appwrite-key
+   NEXT_PUBLIC_APPWRITE_ENDPOINT=your-appwrite-endpoint
+   NEXT_PUBLIC_APPWRITE_PROJECT=your-appwrite-projectId
+   NEXT_PUBLIC_APPWRITE_DATABASE=your-appwrite-databaseId
+   NEXT_PUBLIC_APPWRITE_COLLECTION_ROOMS=your-appwrite-collectionId
+   NEXT_PUBLIC_APPWRITE_COLLECTION_BOOKINGS=your-appwrite-collectionId
+   NEXT_PUBLIC_APPWRITE_STORAGE_BUCKET_ROOMS=your-appwrite-bucketId
+   NEXT_PUBLIC_URL=your-app-url
+   ```
+
+4. **Run the Development Server**
+
+   Start the application with:
+
+   ```bash
+   npm run dev
+   ```
+
+   Or using yarn:
+
+   ```bash
+   yarn dev
+   ```
+
+5. **Access the Application**
+
+   Open your browser and navigate to `http://localhost:3000` to view the application.
+
+## Project Structure
+
+Here's a brief overview of the project structure:
+
+```
+book-rooms/
+├── public/          # Static assets
+├── app/             # Application pages and routing
+├── assets/          # Images and other static files
+├── components/      # Reusable components
+├── config/          # Configuration files (e.g., Appwrite setup)
+├── context/         # Context API for state management
+├── middleware.js     # Middleware for authentication and routing logic
+├── tailwind.config.js # Tailwind CSS configuration file
+├── postcss.config.js  # PostCSS configuration file for Tailwind integration
+├── package.json      # Project metadata and dependencies
+└── README.md        # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### User Authentication
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Users can sign up or log in using their email credentials. After logging in, they will have access to all functionalities of the application.
 
-## Learn More
+### Room Management
 
-To learn more about Next.js, take a look at the following resources:
+Users can add new rooms through a dedicated form. Available rooms can be viewed on the main page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Booking Management
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Users can manage their bookings through a user-friendly interface that allows them to create, update, or delete bookings as needed.
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! Please submit a pull request or open an issue for any feature requests or bug reports.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Citation
+
+This project is done with in accordance to this video by [Traversy Media](https://www.youtube.com/watch?v=l9zh0pqEHyc) on his youtube channel.

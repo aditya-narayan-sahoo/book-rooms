@@ -11,6 +11,7 @@ async function createRoom(previousState, formData) {
     if (!user) {
       return { error: "You must be logged in to create a room" };
     }
+    // Uploading image
     let imageID;
     const image = formData.get("image");
     if (image && image.size > 0 && image.name !== "undefined") {
